@@ -1,0 +1,12 @@
+string number
+string type
+float32 distance_to_image_center
+geometry_msgs/Pose pose
+geometry_msgs/Pose pose_camera
+geometry_msgs/Pose pose_pic
+float64 rvecx
+float64 rvecy
+float64 rvecz
+float64 tvecx
+float64 tvecy
+float64 tvecz

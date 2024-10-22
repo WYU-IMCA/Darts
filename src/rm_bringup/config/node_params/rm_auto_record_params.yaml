@@ -1,0 +1,11 @@
+/**:
+  ros__parameters:
+    uri: "record/"
+    topic_name:
+    - "/image_raw/compressed"
+    #- "/image_raw"
+    - "/camera_info"
+    topic_type:
+    - "sensor_msgs/msg/CompressedImage"
+    #- "sensor_msgs/msg/Image"
+    - "sensor_msgs/msg/CameraInfo"

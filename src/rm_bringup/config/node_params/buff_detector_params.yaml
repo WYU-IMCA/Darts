@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    detector:
+      model: "buff_quantized.xml"
+      nms_threshold: 0.05
+      conf_threshold: 0.7
+      image_size: 640
+      bin_threshold: 95.0 # 65.0
+      fault_tolerance_ratio: 0.3

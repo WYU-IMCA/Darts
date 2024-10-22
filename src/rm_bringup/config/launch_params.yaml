@@ -1,0 +1,15 @@
+odom2camera:
+  xyz: "\"0.0  0.0  0.0\""
+  rpy: "\"0.0  0.0  0.0\""
+
+# 设置启动参数
+# 命名空间 所有节点、话题都会以这个命名空间开头，如/some_namespace/image_raw
+namespace: 'darts'
+# true: 读取视频 false: 读取相机
+video_play: false 
+#daheng:大恒相机  hik:海康相机  mv:迈德威视
+camera_mode: hik
+# true: 虚拟下位机 false: 实车 
+virtual_serial: false 
+# true:开启录像 false:关闭录像
+record: false
