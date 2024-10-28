@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     camera_info_url: package://rm_bringup/config/camera_info.yaml
-    path: "/home/liang/video/green1.mp4"
+    path: "/home/liang/Darts/green1.mp4"
     frame_rate: 30
     start_frame: 0
     frame_id: "camera_optical_frame"

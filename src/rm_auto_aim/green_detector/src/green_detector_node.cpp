@@ -104,7 +104,7 @@ namespace fyt::auto_aim
     //   RCLCPP_INFO(rclcpp::get_logger("green_solver"),"Something Wrong when lookUpTransform");
     //   return;
     // }
-
+    
     auto greens = detectGreen(img_msg);
 
     green_msg_.header = img_msg->header;
@@ -125,6 +125,9 @@ namespace fyt::auto_aim
           green_msg_.pose.position.x = tvec.at<double>(0);
           green_msg_.pose.position.y = tvec.at<double>(1);
           green_msg_.pose.position.z = tvec.at<double>(2);
+
+          green_msg_.pose_pixel.position.x = green_.center.x;
+          green_msg_.pose_pixel.position.y = green_.center.y;
 
           // rotation matrix to quaternion
           tf2::Matrix3x3 tf2_rotation_matrix(rotation_matrix.at<double>(0, 0),
