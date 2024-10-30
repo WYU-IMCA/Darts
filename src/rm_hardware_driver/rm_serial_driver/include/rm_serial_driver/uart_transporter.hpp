@@ -30,7 +30,7 @@ namespace fyt::serial_driver {
 class UartTransporter : public TransporterInterface {
 public:
   UartTransporter(const std::string &device_path = "/dev/ttyUSB0",
-                  int speed = 115200,
+                  int speed = 460800,
                   int flow_ctrl = 0,
                   int databits = 8,
                   int stopbits = 1,

@@ -72,7 +72,6 @@ namespace fyt::serial_driver::protocol
         { this->send(*msg); });
 
     return {sub1};
-    // return {sub1, sub2, sub3};
   }
 
   std::vector<rclcpp::Client<rm_interfaces::srv::SetMode>::SharedPtr> ProtocolInfantry::getClients(

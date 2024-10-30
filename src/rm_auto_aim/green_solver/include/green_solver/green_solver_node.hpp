@@ -35,13 +35,8 @@ private:
   
   rclcpp::Publisher<rm_interfaces::msg::GimbalCmd>::SharedPtr gimbal_pub_;
 
-  // Subscriber with tf2 message_filter
-  std::string target_frame_;
-  std::shared_ptr<tf2_ros::Buffer> tf2_buffer_;
-  std::shared_ptr<tf2_ros::TransformListener> tf2_listener_;
-  message_filters::Subscriber<rm_interfaces::msg::Green> green_sub_;
-  std::shared_ptr<tf2_filter> tf2_filter_;
-
+  rclcpp::Subscription<rm_interfaces::msg::Green>::SharedPtr green_sub_;
+  
 };
 
 

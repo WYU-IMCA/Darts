@@ -139,26 +139,6 @@ namespace fyt::serial_driver
         // }
         //}
 
-        geometry_msgs::msg::TransformStamped t;
-        timestamp_offset_ = this->get_parameter("timestamp_offset").as_double();
-        t.header.stamp = this->now() - rclcpp::Duration::from_seconds(timestamp_offset_);
-        t.header.frame_id = target_frame_;
-        t.child_frame_id = "gimbal_link";
-        double roll = 0;
-        double pitch = 0;
-        double yaw = receive_data.yaw *CV_PI/180;
-        tf2::Quaternion q;
-        q.setRPY(roll, pitch, yaw);
-        t.transform.rotation = tf2::toMsg(q);
-        tf_broadcaster_->sendTransform(t);
-
-        // odom_rectify: 转了roll角后的坐标系
-        Eigen::Quaterniond q_eigen(q.w(), q.x(), q.y(), q.z());
-        Eigen::Vector3d rpy = utils::getRPY(q_eigen.toRotationMatrix());
-        q.setRPY(rpy[0], 0, 0);
-        t.header.frame_id = target_frame_;
-        t.child_frame_id = target_frame_ + "_rectify";
-        tf_broadcaster_->sendTransform(t);
       }
       else
       {

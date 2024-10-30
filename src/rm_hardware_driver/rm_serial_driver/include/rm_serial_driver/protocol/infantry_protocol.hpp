@@ -45,7 +45,6 @@ namespace fyt::serial_driver::protocol
 
   private:
     FixedPacketTool<6>::SharedPtr packet_tool_;
-    float last_yaw_,last_pitch_;
   };
 } // namespace fyt::serial_driver::protocol
 

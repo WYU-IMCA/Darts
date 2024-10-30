@@ -11,17 +11,8 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Armor.msg"
-  "msg/Armors.msg"
-  "msg/Target.msg"
   "msg/GimbalCmd.msg"
-  "msg/DebugLight.msg"
-  "msg/DebugLights.msg"
-  "msg/DebugArmor.msg"
-  "msg/DebugArmors.msg"
-  "msg/Measurement.msg"
   "msg/Green.msg"
-  "msg/ChassisCmd.msg"
   "msg/SerialReceiveData.msg"
   "srv/SetMode.srv"
   DEPENDENCIES

@@ -6,10 +6,10 @@ odom2camera:
 # 命名空间 所有节点、话题都会以这个命名空间开头，如/some_namespace/image_raw
 namespace: 'darts'
 # true: 读取视频 false: 读取相机
-video_play: false 
+video_play: true 
 #daheng:大恒相机  hik:海康相机  mv:迈德威视
-camera_mode: mv
+camera_mode: hik
 # true: 虚拟下位机 false: 实车 
-virtual_serial: false 
+virtual_serial: true 
 # true:开启录像 false:关闭录像
 record: false

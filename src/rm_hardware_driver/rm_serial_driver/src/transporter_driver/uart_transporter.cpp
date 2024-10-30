@@ -32,8 +32,8 @@ namespace fyt::serial_driver {
 
 bool UartTransporter::setParam(int speed, int flow_ctrl, int databits, int stopbits, int parity) {
   // 设置串口数据帧格式
-  int speed_arr[] = {B115200, B19200, B9600, B4800, B2400, B1200, B300};
-  int name_arr[] = {115200, 19200, 9600, 4800, 2400, 1200, 300};
+  int speed_arr[] = {B460800,B115200, B19200, B9600, B4800, B2400, B1200, B300};
+  int name_arr[] = {460800,115200, 19200, 9600, 4800, 2400, 1200, 300};
   struct termios options;
   // tcgetattr(fd,&options)得到与fd指向对象的相关参数，并将它们保存于options,该函数还可以测试配置是否正确，
   // 该串口是否可用等。若调用成功，函数返回值为0，若调用失败，函数返回值为1.

@@ -85,26 +85,6 @@ namespace fyt::auto_aim
 
   void GreenDetectorNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg)
   {
-    // Get the transform from odom to gimbal
-    // try
-    // {
-    //   rclcpp::Time target_time = img_msg->header.stamp;
-    //   auto odom_to_gimbal = tf2_buffer_->lookupTransform(
-    //       odom_frame_, "camera_optical_frame", target_time, rclcpp::Duration::from_seconds(0.008));
-    //   auto msg_q = odom_to_gimbal.transform.rotation;
-    //   tf2::Quaternion tf_q;
-    //   tf2::fromMsg(msg_q, tf_q);
-    //   tf2::Matrix3x3 tf2_matrix = tf2::Matrix3x3(tf_q);
-    //   imu_to_camera_ << tf2_matrix.getRow(0)[0], tf2_matrix.getRow(0)[1], tf2_matrix.getRow(0)[2],
-    //       tf2_matrix.getRow(1)[0], tf2_matrix.getRow(1)[1], tf2_matrix.getRow(1)[2],
-    //       tf2_matrix.getRow(2)[0], tf2_matrix.getRow(2)[1], tf2_matrix.getRow(2)[2];
-    // }
-    // catch (...)
-    // {
-    //   RCLCPP_INFO(rclcpp::get_logger("green_solver"),"Something Wrong when lookUpTransform");
-    //   return;
-    // }
-    
     auto greens = detectGreen(img_msg);
 
     green_msg_.header = img_msg->header;
