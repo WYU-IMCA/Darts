@@ -16,7 +16,7 @@
 namespace fyt::auto_aim {
 
 // Armor size, Unit: m
-constexpr double GREEN_RADIUS = 45.0 / 1000.0; // 55
+constexpr double GREEN_RADIUS = 17.0 / 1000.0; // 55
 
 struct Green {
   static constexpr const int N_LANDMARKS = 4;
